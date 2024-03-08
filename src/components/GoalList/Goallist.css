@@ -1,0 +1,14 @@
+.div-cls h2{
+    text-align: center;
+}
+.goal-cls{
+    list-style: none;
+    margin: 2rem ;
+    padding: 0;
+}
+
+.goal-cls li{
+    margin: 1rem 0;
+    border: 1px solid grey;
+    padding: 1rem;
+}   
