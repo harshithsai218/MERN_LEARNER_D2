@@ -1,6 +1,7 @@
 import React from "react";
 import "./Goallist.css";
 const Goallist = props =>{
+    
     //console.log(props.goals);
     return (
         <ul className='goal-cls'>

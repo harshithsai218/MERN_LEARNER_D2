@@ -1,16 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./App.css";
 import Goallist from './components/GoalList/Goallist';
 import NewGoal from './components/NewGoal/NewGoal';
 const App = () => {
-  const courseGoal = [
+  const [courseGoal,setCourseGoals]=useState([
     {id: 'cg1',text : 'Finish this Course'},
     {id: 'cg2',text : 'learn all about the Course Main Topic'},
     {id: 'cg3',text : 'Help other students in the Course Q&A'}
-  ];
+  ]);
+
   const addNewGoalHandler=(newGoal)=>{
-      courseGoal.push(newGoal);
-      console.log(courseGoal); 
+    //setCourseGoals(courseGoal.concat(newGoal));  
+    setCourseGoals((prevCourseGoals)=>{return prevCourseGoals.concat(newGoal);});  
+    // courseGoal.push(newGoal);
+      // console.log(courseGoal); 
   };
   return (
     <div className='div-cls'>
